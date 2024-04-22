@@ -49,11 +49,10 @@ func main() {
 		exit()
 	}
 
-	var filePath *string
 	chosenFlag := getFlag(command[0])
-	filePath = flag.String(chosenFlag, DefaultValue, DefaultUsage)
+	filePath := flag.String(chosenFlag, DefaultValue, DefaultUsage)
 	flag.Parse()
-	if filePath == nil || *filePath == "" {
+	if *filePath == "" {
 		filePath = &chosenFlag
 	}
 
