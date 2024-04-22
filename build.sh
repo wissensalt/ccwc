@@ -1,0 +1,1 @@
+go build -o bin/ccwc cmd/main.go
